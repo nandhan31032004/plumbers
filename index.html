@@ -3,285 +3,34 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>JMJ Plumbing LLC | Midland, TX</title>
+<title>Midland Plumbers — Website Previews</title>
 <style>
-  :root{
-    --cream:#f6efe4;
-    --cream2:#efe3d0;
-    --terracotta:#c0633c;
-    --terracotta-dk:#9b4a2a;
-    --brown:#3f2f24;
-    --brown-soft:#6b5849;
+  body{font-family:Arial,sans-serif;background:#f4f4f2;margin:0;padding:60px 7%;color:#222;}
+  h1{font-size:1.8rem;margin-bottom:10px;}
+  p{color:#555;margin-bottom:40px;}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:20px;}
+  a.card{
+    display:block;background:#fff;border:1px solid #ddd;border-radius:10px;
+    padding:24px;text-decoration:none;color:#222;font-weight:600;
+    transition:box-shadow .2s, transform .2s;
   }
-  *{margin:0;padding:0;box-sizing:border-box;}
-  body{
-    background:var(--cream);
-    color:var(--brown);
-    font-family:Georgia, 'Times New Roman', serif;
-  }
-  a{color:inherit;}
-
-  header{
-    display:flex;justify-content:space-between;align-items:center;
-    padding:28px 7%;
-    background:var(--brown);
-    color:var(--cream);
-  }
-  .logo{font-size:1.5rem;letter-spacing:0.5px;}
-  .logo span{color:var(--terracotta);}
-  nav{display:flex;align-items:center;gap:28px;font-family:Arial,sans-serif;}
-  nav a{text-decoration:none;color:var(--cream2);font-size:0.9rem;}
-  .nav-call{
-    background:var(--terracotta);
-    color:#fff !important;
-    padding:10px 20px;
-    border-radius:4px;
-    font-weight:bold;
-  }
-
-  .hero{
-    padding:100px 7% 80px;
-    text-align:center;
-    max-width:780px;
-    margin:0 auto;
-  }
-  .badge{
-    display:inline-flex;align-items:center;gap:8px;
-    background:var(--cream2);
-    border:1px solid #ddc8a8;
-    border-radius:999px;
-    padding:8px 18px;
-    font-family:Arial,sans-serif;
-    font-size:0.82rem;
-    color:var(--brown-soft);
-    margin-bottom:30px;
-  }
-  .badge .dot{width:8px;height:8px;border-radius:50%;background:var(--terracotta);}
-  h1{
-    font-size:3rem;
-    line-height:1.2;
-    font-weight:normal;
-  }
-  h1 em{color:var(--terracotta);font-style:normal;}
-  .hero p.sub{
-    margin-top:24px;
-    font-size:1.2rem;
-    color:var(--brown-soft);
-    line-height:1.6;
-  }
-  .hero-cta{margin-top:38px;display:flex;justify-content:center;gap:16px;flex-wrap:wrap;font-family:Arial,sans-serif;}
-  .btn-fill{
-    background:var(--terracotta);color:#fff;
-    padding:15px 30px;border-radius:4px;
-    text-decoration:none;font-weight:bold;font-size:0.95rem;
-  }
-  .btn-outline{
-    border:1.5px solid var(--brown);color:var(--brown);
-    padding:15px 30px;border-radius:4px;
-    text-decoration:none;font-weight:bold;font-size:0.95rem;
-  }
-
-  .family-strip{
-    background:var(--cream2);
-    padding:50px 7%;
-    text-align:center;
-  }
-  .family-strip p{
-    font-size:1.3rem;
-    max-width:680px;
-    margin:0 auto;
-    font-style:italic;
-    color:var(--brown);
-  }
-  .family-strip .sig{
-    margin-top:18px;
-    font-family:Arial,sans-serif;
-    font-size:0.85rem;
-    color:var(--brown-soft);
-    letter-spacing:1px;
-    text-transform:uppercase;
-  }
-
-  .section{padding:90px 7%;max-width:1100px;margin:0 auto;}
-  .section-title{
-    text-align:center;
-    font-size:2.2rem;
-    margin-bottom:50px;
-  }
-  .section-title span{color:var(--terracotta);}
-
-  .service-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:30px;
-  }
-  .service-card{
-    background:#fff;
-    border:1px solid #e6d8bd;
-    border-radius:10px;
-    padding:34px 26px;
-    text-align:center;
-  }
-  .service-card .num{
-    font-family:Arial,sans-serif;
-    color:var(--terracotta);
-    font-size:0.85rem;
-    letter-spacing:2px;
-    margin-bottom:14px;
-  }
-  .service-card h3{font-size:1.25rem;margin-bottom:10px;}
-  .service-card p{font-family:Arial,sans-serif;color:var(--brown-soft);font-size:0.9rem;line-height:1.6;}
-
-  .about-row{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:60px;
-    align-items:center;
-  }
-  .about-row p{margin-bottom:18px;line-height:1.7;color:var(--brown-soft);font-size:1.05rem;}
-  .photo-frame{
-    background:var(--cream2);
-    border:6px solid #fff;
-    box-shadow:0 6px 20px rgba(63,47,36,0.15);
-    border-radius:6px;
-    padding:50px 30px;
-    text-align:center;
-  }
-  .photo-frame .crest{
-    font-size:2.6rem;
-    margin-bottom:14px;
-  }
-  .photo-frame .crest-label{
-    font-family:Arial,sans-serif;
-    font-size:0.85rem;
-    letter-spacing:2px;
-    text-transform:uppercase;
-    color:var(--brown-soft);
-  }
-  .photo-frame .crest-name{
-    font-size:1.4rem;
-    color:var(--terracotta-dk);
-    margin-top:10px;
-  }
-
-  .cta-band{
-    background:var(--brown);
-    color:var(--cream);
-    text-align:center;
-    padding:80px 7%;
-  }
-  .cta-band h2{font-size:2rem;margin-bottom:20px;}
-  .cta-band .phone{
-    font-family:Arial,sans-serif;
-    font-size:2.2rem;
-    color:var(--terracotta);
-    font-weight:bold;
-    text-decoration:none;
-    display:inline-block;
-    margin-top:10px;
-  }
-
-  footer{
-    padding:40px 7%;
-    text-align:center;
-    font-family:Arial,sans-serif;
-    color:var(--brown-soft);
-    font-size:0.85rem;
-  }
-
-  @media(max-width:800px){
-    h1{font-size:2.1rem;}
-    .service-grid{grid-template-columns:1fr;}
-    .about-row{grid-template-columns:1fr;}
-    nav a:not(.nav-call){display:none;}
-  }
+  a.card:hover{box-shadow:0 6px 18px rgba(0,0,0,0.08);transform:translateY(-2px);}
 </style>
 </head>
 <body>
-
-  <header>
-    <div class="logo">JMJ <span>Plumbing</span></div>
-    <nav>
-      <a href="#services">Services</a>
-      <a href="#about">Our Story</a>
-      <a class="nav-call" href="tel:4327041130">(432) 704-1130</a>
-    </nav>
-  </header>
-
-  <section class="hero">
-    <div class="badge"><span class="dot"></span> Family-Owned · Midland, TX</div>
-    <h1>The problems no one else <em>wants to tackle.</em></h1>
-    <p class="sub">JMJ Plumbing has been fixing Midland's plumbing — the easy jobs and the stubborn ones — with the kind of care you'd expect from a family business.</p>
-    <div class="hero-cta">
-      <a href="tel:4327041130" class="btn-fill">Call (432) 704-1130</a>
-      <a href="#services" class="btn-outline">Our Services</a>
-    </div>
-  </section>
-
-  <div class="family-strip">
-    <p>"Customer satisfaction is our top priority — every job matches your vision of the work done."</p>
-    <div class="sig">— The JMJ Plumbing Team</div>
+  <h1>Midland Plumbing Co. — Website Previews</h1>
+  <p>Click any business to view its custom-built site.</p>
+  <div class="grid">
+    <a class="card" href="aa-plumbing/">A&amp;A Plumbing</a>
+    <a class="card" href="aplus-plumbing-heating-air/">A+ Plumbing Heating &amp; Air</a>
+    <a class="card" href="aterrys-plumbing/">A-Terry's Plumbing</a>
+    <a class="card" href="awesome-plumbers-midland/">Awesome Plumbers Midland</a>
+    <a class="card" href="barrons-plumbing/">Barron's Plumbing</a>
+    <a class="card" href="bills-plumbing-fence-craft/">Bill's Plumbing &amp; Fence Craft</a>
+    <a class="card" href="alvins-plumbing/">Alvin's Plumbing</a>
+    <a class="card" href="affordable-home-maintenance/">Affordable Home Maintenance</a>
+    <a class="card" href="forthright-plumbing/">Forthright Plumbing</a>
+    <a class="card" href="jmj-plumbing/">JMJ Plumbing</a>
   </div>
-
-  <section class="section" id="services">
-    <h2 class="section-title">What We <span>Fix</span></h2>
-    <div class="service-grid">
-      <div class="service-card">
-        <div class="num">01</div>
-        <h3>Leak Repair</h3>
-        <p>Found fast, fixed right — no matter where it's hiding.</p>
-      </div>
-      <div class="service-card">
-        <div class="num">02</div>
-        <h3>Drain Cleaning</h3>
-        <p>Slow drains and full clogs cleared the same day.</p>
-      </div>
-      <div class="service-card">
-        <div class="num">03</div>
-        <h3>Water Heaters</h3>
-        <p>Install, repair, and replacement for any home or business.</p>
-      </div>
-      <div class="service-card">
-        <div class="num">04</div>
-        <h3>Fixture Work</h3>
-        <p>Faucets, toilets, and sinks — repaired or replaced cleanly.</p>
-      </div>
-      <div class="service-card">
-        <div class="num">05</div>
-        <h3>Gas Lines</h3>
-        <p>Careful, licensed work on gas line repair and installs.</p>
-      </div>
-      <div class="service-card">
-        <div class="num">06</div>
-        <h3>General Plumbing</h3>
-        <p>If it carries water through your home, we can handle it.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="about">
-    <div class="about-row">
-      <div>
-        <p>JMJ Plumbing LLC has been part of the Midland community for over a decade, built and run as a family operation from the ground up.</p>
-        <p>Word travels fast around here — and in neighborhood conversations across Midland, JMJ keeps coming up as the name people trust when something needs fixing right.</p>
-        <p>Based out of West County Road 140, the team treats every home like it's one of their own.</p>
-      </div>
-      <div class="photo-frame">
-        <div class="crest">🔧</div>
-        <div class="crest-label">Family Operated Since</div>
-        <div class="crest-name">2014</div>
-      </div>
-    </div>
-  </section>
-
-  <div class="cta-band">
-    <h2>Got a plumbing problem? Let's fix it.</h2>
-    <a href="tel:4327041130" class="phone">(432) 704-1130</a>
-  </div>
-
-  <footer>
-    JMJ Plumbing LLC · 1906 W County Road 140, Midland, TX 79706
-  </footer>
-
 </body>
 </html>
