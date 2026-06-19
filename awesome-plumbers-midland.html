@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Awesome Plumbers Midland</title>
+<style>
+  :root{
+    --yellow:#f5c542;
+    --navy:#1b2a4a;
+    --coral:#ef5b5b;
+    --cream:#fffaf0;
+    --gray:#5a6178;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{
+    background:var(--cream);
+    color:var(--navy);
+    font-family:'Verdana', 'Trebuchet MS', sans-serif;
+  }
+  a{color:inherit;}
+
+  header{
+    display:flex;justify-content:space-between;align-items:center;
+    padding:24px 7%;
+  }
+  .logo{
+    font-size:1.5rem;font-weight:900;color:var(--navy);
+    display:flex;align-items:center;gap:8px;
+  }
+  .logo .star{color:var(--coral);}
+  nav{display:flex;align-items:center;gap:26px;}
+  nav a{text-decoration:none;color:var(--navy);font-weight:600;font-size:0.92rem;}
+  .nav-call{
+    background:var(--coral);color:#fff !important;
+    padding:11px 22px;border-radius:30px;font-weight:800;
+  }
+
+  .hero{
+    padding:60px 7% 0;
+    text-align:center;
+    position:relative;
+    overflow:hidden;
+  }
+  .hero-burst{
+    position:absolute;
+    top:-100px;right:-100px;
+    width:340px;height:340px;
+    background:var(--yellow);
+    border-radius:50%;
+    opacity:0.5;
+    z-index:0;
+  }
+  .hero-burst2{
+    position:absolute;
+    bottom:-60px;left:-80px;
+    width:220px;height:220px;
+    background:var(--coral);
+    border-radius:50%;
+    opacity:0.15;
+    z-index:0;
+  }
+  .hero-content{position:relative;z-index:1;max-width:780px;margin:0 auto;padding-top:30px;}
+  .tag{
+    display:inline-block;
+    background:var(--navy);
+    color:var(--yellow);
+    font-weight:800;
+    font-size:0.85rem;
+    padding:8px 20px;
+    border-radius:30px;
+    margin-bottom:26px;
+    transform:rotate(-2deg);
+  }
+  h1{
+    font-size:3.4rem;
+    font-weight:900;
+    line-height:1.1;
+  }
+  h1 .pop{color:var(--coral);}
+  .hero p.sub{
+    margin-top:22px;
+    font-size:1.2rem;
+    color:var(--gray);
+    font-weight:500;
+  }
+  .hero-cta{margin-top:36px;display:flex;justify-content:center;gap:16px;flex-wrap:wrap;}
+  .btn-fill{
+    background:var(--coral);color:#fff;
+    padding:17px 32px;border-radius:30px;
+    text-decoration:none;font-weight:800;font-size:1rem;
+    box-shadow:0 6px 0 #c43d3d;
+  }
+  .btn-outline{
+    border:3px solid var(--navy);color:var(--navy);
+    padding:14px 30px;border-radius:30px;
+    text-decoration:none;font-weight:800;font-size:1rem;
+  }
+
+  .stripe{
+    margin-top:70px;
+    background:var(--navy);
+    color:#fff;
+    padding:30px 7%;
+    display:flex;
+    justify-content:space-around;
+    flex-wrap:wrap;
+    gap:20px;
+    transform:skewY(-1.5deg);
+  }
+  .stripe-inner{
+    transform:skewY(1.5deg);
+    display:flex;justify-content:space-around;flex:1;flex-wrap:wrap;gap:20px;
+  }
+  .stripe-item{text-align:center;}
+  .stripe-item b{font-size:1.7rem;color:var(--yellow);display:block;}
+  .stripe-item span{font-size:0.82rem;color:#b9c0d4;}
+
+  .section{padding:90px 7%;max-width:1150px;margin:0 auto;}
+  .section-title{
+    text-align:center;
+    font-size:2.2rem;
+    font-weight:900;
+    margin-bottom:50px;
+  }
+  .section-title .pop{color:var(--coral);}
+
+  .service-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:26px;
+  }
+  .service-card{
+    background:#fff;
+    border-radius:18px;
+    padding:34px 26px;
+    box-shadow:0 8px 0 rgba(27,42,74,0.08);
+    text-align:center;
+    transition:transform .2s;
+  }
+  .service-card:hover{transform:translateY(-4px);}
+  .service-card .emoji{font-size:2.2rem;margin-bottom:14px;}
+  .service-card h3{font-size:1.15rem;margin-bottom:10px;}
+  .service-card p{color:var(--gray);font-size:0.9rem;line-height:1.6;}
+
+  .cta-band{
+    background:var(--yellow);
+    border-radius:30px;
+    margin:0 7% 90px;
+    padding:70px 7%;
+    text-align:center;
+  }
+  .cta-band h2{font-size:2.1rem;font-weight:900;color:var(--navy);}
+  .cta-band p{margin-top:14px;color:#5d4d10;font-size:1.1rem;}
+  .cta-band .btn-fill{margin-top:30px;display:inline-block;}
+
+  footer{
+    background:var(--navy);
+    color:#b9c0d4;
+    text-align:center;
+    padding:50px 7% 40px;
+  }
+  footer .phone{
+    font-size:2rem;font-weight:900;color:var(--yellow);text-decoration:none;
+    display:inline-block;margin:14px 0;
+  }
+
+  @media(max-width:850px){
+    h1{font-size:2.2rem;}
+    .service-grid{grid-template-columns:1fr;}
+    .stripe{flex-direction:column;}
+    nav a:not(.nav-call){display:none;}
+  }
+</style>
+</head>
+<body>
+
+  <header>
+    <div class="logo"><span class="star">★</span> Awesome Plumbers</div>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a class="nav-call" href="tel:4322034700">(432) 203-4700</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-burst"></div>
+    <div class="hero-burst2"></div>
+    <div class="hero-content">
+      <div class="tag">MIDLAND, TX</div>
+      <h1>Plumbing that's actually <span class="pop">awesome.</span></h1>
+      <p class="sub">No dread, no drama — just fast, friendly plumbing that gets your day back on track.</p>
+      <div class="hero-cta">
+        <a href="tel:4322034700" class="btn-fill">Call (432) 203-4700</a>
+        <a href="#services" class="btn-outline">See Services</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="stripe">
+    <div class="stripe-inner">
+      <div class="stripe-item"><b>Fast</b><span>Quick response times</span></div>
+      <div class="stripe-item"><b>Fair</b><span>Honest, upfront pricing</span></div>
+      <div class="stripe-item"><b>Friendly</b><span>Plumbers you'll actually like</span></div>
+    </div>
+  </div>
+
+  <section class="section" id="services">
+    <h2 class="section-title">What We <span class="pop">Handle</span></h2>
+    <div class="service-grid">
+      <div class="service-card">
+        <div class="emoji">💧</div>
+        <h3>Leak Repair</h3>
+        <p>Drips, leaks, and mystery puddles — sorted fast.</p>
+      </div>
+      <div class="service-card">
+        <div class="emoji">🚿</div>
+        <h3>Fixture Installs</h3>
+        <p>Faucets, sinks, and showers installed clean.</p>
+      </div>
+      <div class="service-card">
+        <div class="emoji">🔥</div>
+        <h3>Water Heaters</h3>
+        <p>Hot water back on, no cold showers required.</p>
+      </div>
+      <div class="service-card">
+        <div class="emoji">🚽</div>
+        <h3>Drain Cleaning</h3>
+        <p>Clogs cleared without the gross guesswork.</p>
+      </div>
+      <div class="service-card">
+        <div class="emoji">🏠</div>
+        <h3>Home &amp; Business</h3>
+        <p>Residential or commercial, same awesome service.</p>
+      </div>
+      <div class="service-card">
+        <div class="emoji">⚡</div>
+        <h3>Same-Day Calls</h3>
+        <p>Most jobs scheduled same day across Midland.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="cta-band">
+    <h2>Got a plumbing problem?</h2>
+    <p>Let's make it disappear. One call does it.</p>
+    <a href="tel:4322034700" class="btn-fill">Call (432) 203-4700</a>
+  </div>
+
+  <footer>
+    <div>Awesome Plumbers Midland</div>
+    <a href="tel:4322034700" class="phone">(432) 203-4700</a>
+    <div>Serving Midland, TX</div>
+  </footer>
+
+</body>
+</html>

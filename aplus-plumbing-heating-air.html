@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A+ Plumbing Heating &amp; Air Conditioning | Midland, TX</title>
+<style>
+  :root{
+    --ember:#d6622f;
+    --ember-dk:#a8481f;
+    --frost:#2f7d9e;
+    --frost-dk:#1f5c76;
+    --slate:#1d2630;
+    --paper:#fafaf8;
+    --gray:#5b6470;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{
+    background:var(--paper);
+    color:var(--slate);
+    font-family:'Segoe UI', Arial, sans-serif;
+  }
+  a{color:inherit;}
+
+  header{
+    display:flex;justify-content:space-between;align-items:center;
+    padding:24px 7%;
+    background:var(--slate);
+  }
+  .logo{color:#fff;font-size:1.25rem;font-weight:700;}
+  .logo .plus{
+    background:linear-gradient(135deg, var(--ember), var(--frost));
+    -webkit-background-clip:text;
+    background-clip:text;
+    -webkit-text-fill-color:transparent;
+  }
+  nav{display:flex;align-items:center;gap:30px;}
+  nav a{color:#cdd3da;text-decoration:none;font-size:0.92rem;}
+  .nav-call{
+    background:linear-gradient(135deg, var(--ember), var(--frost));
+    color:#fff !important;
+    padding:10px 22px;border-radius:6px;font-weight:600;
+  }
+
+  .hero{
+    padding:90px 7% 0;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    max-width:1300px;
+    margin:0 auto;
+  }
+  .hero-half{padding:50px 40px;}
+  .heat-half{
+    background:linear-gradient(160deg, #fff3ea, #fde2cf);
+    border-radius:18px 0 0 18px;
+  }
+  .air-half{
+    background:linear-gradient(160deg, #eaf6fb, #d6ecf4);
+    border-radius:0 18px 18px 0;
+  }
+  .half-label{
+    font-size:0.8rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;
+    margin-bottom:14px;
+  }
+  .heat-half .half-label{color:var(--ember-dk);}
+  .air-half .half-label{color:var(--frost-dk);}
+  .half-title{font-size:1.7rem;font-weight:700;margin-bottom:14px;line-height:1.2;}
+  .hero-half p{color:var(--gray);font-size:0.98rem;line-height:1.6;}
+
+  .hero-center{
+    text-align:center;
+    padding:60px 7% 0;
+    max-width:780px;
+    margin:0 auto;
+  }
+  .hero-center h1{
+    font-size:2.6rem;
+    font-weight:800;
+    line-height:1.2;
+  }
+  .hero-center .sub{
+    margin-top:18px;
+    color:var(--gray);
+    font-size:1.1rem;
+  }
+  .hero-cta{margin-top:32px;display:flex;justify-content:center;gap:16px;flex-wrap:wrap;}
+  .btn-fill{
+    background:var(--slate);color:#fff;
+    padding:15px 30px;border-radius:6px;
+    text-decoration:none;font-weight:700;font-size:0.95rem;
+  }
+  .btn-outline{
+    border:1.5px solid var(--slate);color:var(--slate);
+    padding:15px 30px;border-radius:6px;
+    text-decoration:none;font-weight:700;font-size:0.95rem;
+  }
+
+  .section{padding:90px 7%;max-width:1200px;margin:0 auto;}
+  .section-title{
+    text-align:center;font-size:2.1rem;font-weight:800;margin-bottom:50px;
+  }
+
+  .dual-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+  }
+  .dual-col h3{
+    font-size:1.3rem;font-weight:700;margin-bottom:20px;
+    padding-bottom:14px;border-bottom:3px solid;
+  }
+  .heat-col h3{border-color:var(--ember);color:var(--ember-dk);}
+  .air-col h3{border-color:var(--frost);color:var(--frost-dk);}
+  .dual-col ul{list-style:none;}
+  .dual-col li{
+    padding:14px 0;
+    border-bottom:1px solid #e8e6e0;
+    color:var(--slate);
+    font-size:1rem;
+  }
+
+  .gauge-strip{
+    background:var(--slate);
+    color:#fff;
+    padding:50px 7%;
+    display:flex;
+    justify-content:space-around;
+    flex-wrap:wrap;
+    gap:30px;
+  }
+  .gauge{text-align:center;}
+  .gauge b{font-size:2rem;display:block;}
+  .gauge.heat b{color:var(--ember);}
+  .gauge.air b{color:var(--frost);}
+  .gauge span{color:#aab2bb;font-size:0.85rem;}
+
+  footer{
+    background:var(--slate);
+    color:#cdd3da;
+    text-align:center;
+    padding:50px 7% 40px;
+  }
+  footer .phone{
+    font-size:1.8rem;font-weight:800;color:#fff;text-decoration:none;
+    display:inline-block;margin:14px 0;
+  }
+  footer .addr{font-size:0.85rem;margin-top:10px;}
+
+  @media(max-width:850px){
+    .hero{grid-template-columns:1fr;padding-top:50px;}
+    .heat-half{border-radius:18px 18px 0 0;}
+    .air-half{border-radius:0 0 18px 18px;}
+    .hero-center h1{font-size:1.9rem;}
+    .dual-grid{grid-template-columns:1fr;}
+    nav a:not(.nav-call){display:none;}
+  }
+</style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">A<span class="plus">+</span> Plumbing</div>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a class="nav-call" href="tel:4322649311">(432) 264-9311</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-half heat-half">
+      <div class="half-label">Heating</div>
+      <div class="half-title">Stay warm, all winter.</div>
+      <p>Furnace repair, installs, and tune-ups for Midland homes when temperatures drop.</p>
+    </div>
+    <div class="hero-half air-half">
+      <div class="half-label">Cooling</div>
+      <div class="half-title">Stay cool, all summer.</div>
+      <p>AC repair and installation built for Permian Basin heat — fast, reliable, done right.</p>
+    </div>
+  </section>
+
+  <div class="hero-center">
+    <h1>One call for plumbing, heating, and air.</h1>
+    <p class="sub">A+ Plumbing Heating &amp; Air Conditioning covers every system that keeps a Midland home running — hot, cold, and everything in between.</p>
+    <div class="hero-cta">
+      <a href="tel:4322649311" class="btn-fill">Call (432) 264-9311</a>
+      <a href="#services" class="btn-outline">See All Services</a>
+    </div>
+  </div>
+
+  <section class="section" id="services">
+    <h2 class="section-title">Services</h2>
+    <div class="dual-grid">
+      <div class="dual-col heat-col">
+        <h3>Plumbing &amp; Heating</h3>
+        <ul>
+          <li>Water heater install &amp; repair</li>
+          <li>Furnace repair &amp; tune-ups</li>
+          <li>Leak detection &amp; repair</li>
+          <li>Drain &amp; sewer cleaning</li>
+          <li>Gas line service</li>
+        </ul>
+      </div>
+      <div class="dual-col air-col">
+        <h3>Air Conditioning</h3>
+        <ul>
+          <li>AC repair &amp; replacement</li>
+          <li>System tune-ups &amp; maintenance</li>
+          <li>Ductwork inspection</li>
+          <li>Thermostat installation</li>
+          <li>Emergency cooling calls</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <div class="gauge-strip">
+    <div class="gauge heat"><b>Heating</b><span>Furnace &amp; water systems</span></div>
+    <div class="gauge"><b style="color:#fff;">+</b><span>One company, full coverage</span></div>
+    <div class="gauge air"><b>Cooling</b><span>AC &amp; ventilation</span></div>
+  </div>
+
+  <section class="section" id="about">
+    <h2 class="section-title">Why Midland Calls A+</h2>
+    <p style="text-align:center;max-width:680px;margin:0 auto;color:var(--gray);font-size:1.05rem;line-height:1.7;">
+      Most homes need a plumber for one problem and an HVAC tech for another. A+ Plumbing Heating &amp; Air Conditioning handles both — meaning one trusted number for whatever your home throws at you, any time of year.
+    </p>
+  </section>
+
+  <footer>
+    <div>Call for service today</div>
+    <a href="tel:4322649311" class="phone">(432) 264-9311</a>
+    <div class="addr">A+ Plumbing Heating &amp; Air Conditioning · Midland, TX</div>
+  </footer>
+
+</body>
+</html>

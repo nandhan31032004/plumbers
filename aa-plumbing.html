@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A&amp;A Plumbing | Midland, TX</title>
+<style>
+  :root{
+    --navy:#1a2b3c;
+    --steel:#3d5468;
+    --paper:#eef1f0;
+    --line:#9fb0ad;
+    --rust:#b5562f;
+    --ink:#16201f;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Courier New', monospace;
+    line-height:1.5;
+  }
+  .grid-bg{
+    background-image:
+      linear-gradient(var(--line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--line) 1px, transparent 1px);
+    background-size:40px 40px;
+    background-color:var(--paper);
+    opacity:0.18;
+    position:fixed;
+    top:0;left:0;right:0;bottom:0;
+    z-index:0;
+    pointer-events:none;
+  }
+  .wrap{position:relative;z-index:1;}
+
+  header{
+    background:var(--navy);
+    color:var(--paper);
+    padding:18px 6%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    border-bottom:4px solid var(--rust);
+  }
+  .brand{
+    font-family:'Arial Narrow', Arial, sans-serif;
+    font-weight:800;
+    font-size:1.4rem;
+    letter-spacing:1px;
+    text-transform:uppercase;
+  }
+  .brand span{color:var(--rust);}
+  nav a{
+    color:var(--paper);
+    text-decoration:none;
+    margin-left:28px;
+    font-size:0.85rem;
+    letter-spacing:1px;
+    text-transform:uppercase;
+    border-bottom:1px solid transparent;
+    transition:border-color .2s;
+  }
+  nav a:hover{border-color:var(--rust);}
+  .callbtn{
+    background:var(--rust);
+    color:#fff !important;
+    padding:8px 16px;
+    border:1px solid var(--rust);
+  }
+
+  .hero{
+    padding:90px 8% 70px;
+    max-width:1100px;
+  }
+  .spec-tag{
+    display:inline-block;
+    border:1px solid var(--steel);
+    color:var(--steel);
+    font-size:0.75rem;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    padding:4px 10px;
+    margin-bottom:24px;
+  }
+  h1{
+    font-family:'Arial Narrow', Arial, sans-serif;
+    font-weight:800;
+    font-size:3.4rem;
+    line-height:1.05;
+    color:var(--navy);
+    text-transform:uppercase;
+    letter-spacing:-1px;
+    max-width:780px;
+  }
+  .hero p.sub{
+    margin-top:22px;
+    font-size:1.15rem;
+    color:var(--steel);
+    max-width:560px;
+  }
+  .hero-actions{margin-top:36px;display:flex;gap:16px;flex-wrap:wrap;}
+  .btn-primary, .btn-secondary{
+    font-family:'Arial Narrow', Arial, sans-serif;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    font-weight:700;
+    font-size:0.9rem;
+    padding:14px 26px;
+    text-decoration:none;
+    display:inline-block;
+  }
+  .btn-primary{background:var(--navy);color:var(--paper);}
+  .btn-secondary{border:1.5px solid var(--navy);color:var(--navy);}
+
+  .specsheet{
+    background:#fff;
+    border:1px solid var(--line);
+    margin:0 8% 80px;
+    max-width:1100px;
+  }
+  .specsheet-head{
+    background:var(--navy);
+    color:var(--paper);
+    padding:10px 24px;
+    font-size:0.8rem;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    display:flex;
+    justify-content:space-between;
+  }
+  .spec-rows{display:grid;grid-template-columns:repeat(4,1fr);}
+  .spec-row{
+    padding:28px 24px;
+    border-right:1px solid var(--line);
+  }
+  .spec-row:last-child{border-right:none;}
+  .spec-num{font-size:0.75rem;color:var(--rust);letter-spacing:2px;}
+  .spec-row h3{
+    font-family:'Arial Narrow', Arial, sans-serif;
+    text-transform:uppercase;
+    margin:10px 0 8px;
+    font-size:1.05rem;
+    color:var(--navy);
+  }
+  .spec-row p{font-size:0.88rem;color:var(--steel);}
+
+  .section{padding:60px 8%;max-width:1100px;}
+  .section-title{
+    font-family:'Arial Narrow', Arial, sans-serif;
+    text-transform:uppercase;
+    font-size:1.8rem;
+    color:var(--navy);
+    border-left:4px solid var(--rust);
+    padding-left:16px;
+    margin-bottom:36px;
+  }
+  .service-list{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:18px 40px;
+  }
+  .service-item{
+    display:flex;
+    justify-content:space-between;
+    border-bottom:1px solid var(--line);
+    padding:14px 0;
+    font-size:1rem;
+  }
+  .service-item span.code{color:var(--rust);font-size:0.85rem;}
+
+  .about{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+    align-items:start;
+  }
+  .about p{color:var(--steel);margin-bottom:16px;}
+  .stamp{
+    border:2px solid var(--navy);
+    padding:24px;
+    text-align:center;
+  }
+  .stamp .yr{font-size:2.6rem;font-family:'Arial Narrow', Arial, sans-serif;font-weight:800;color:var(--navy);}
+  .stamp .lbl{font-size:0.78rem;letter-spacing:2px;text-transform:uppercase;color:var(--steel);margin-top:4px;}
+
+  footer{
+    background:var(--navy);
+    color:var(--paper);
+    padding:40px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:20px;
+  }
+  .footer-call{
+    font-family:'Arial Narrow', Arial, sans-serif;
+    font-size:1.4rem;
+    font-weight:800;
+  }
+  .footer-call a{color:var(--rust);text-decoration:none;}
+  .foot-addr{font-size:0.85rem;color:var(--line);}
+
+  @media(max-width:768px){
+    h1{font-size:2.2rem;}
+    .spec-rows{grid-template-columns:1fr 1fr;}
+    .spec-row{border-right:none;border-bottom:1px solid var(--line);}
+    .service-list{grid-template-columns:1fr;}
+    .about{grid-template-columns:1fr;}
+    nav a{margin-left:14px;font-size:0.7rem;}
+  }
+</style>
+</head>
+<body>
+<div class="grid-bg"></div>
+<div class="wrap">
+
+  <header>
+    <div class="brand">A<span>&amp;</span>A PLUMBING</div>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a class="callbtn" href="tel:4326346492">(432) 634-6492</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="spec-tag">Midland, TX — Est. 2012</div>
+    <h1>Plumbing done the straightforward way.</h1>
+    <p class="sub">No upsells, no runaround. A&amp;A Plumbing has handled residential and commercial plumbing across Midland for over a decade — fix what's broken, explain what it cost, move on.</p>
+    <div class="hero-actions">
+      <a href="tel:4326346492" class="btn-primary">Call (432) 634-6492</a>
+      <a href="#services" class="btn-secondary">See Services</a>
+    </div>
+  </section>
+
+  <div class="specsheet">
+    <div class="specsheet-head">
+      <span>JOB SPEC — A&amp;A PLUMBING</span>
+      <span>MIDLAND, TX 79701</span>
+    </div>
+    <div class="spec-rows">
+      <div class="spec-row">
+        <div class="spec-num">01</div>
+        <h3>Response</h3>
+        <p>Same-day calls for standard repairs across Midland city limits.</p>
+      </div>
+      <div class="spec-row">
+        <div class="spec-num">02</div>
+        <h3>Coverage</h3>
+        <p>Residential & light commercial — homes, rentals, small offices.</p>
+      </div>
+      <div class="spec-row">
+        <div class="spec-num">03</div>
+        <h3>Pricing</h3>
+        <p>Flat quote before work starts. No surprise line items.</p>
+      </div>
+      <div class="spec-row">
+        <div class="spec-num">04</div>
+        <h3>Experience</h3>
+        <p>Serving Midland and surrounding districts since 2012.</p>
+      </div>
+    </div>
+  </div>
+
+  <section class="section" id="services">
+    <h2 class="section-title">Service Schedule</h2>
+    <div class="service-list">
+      <div class="service-item"><span>Leak detection &amp; repair</span><span class="code">LK-01</span></div>
+      <div class="service-item"><span>Water heater install &amp; repair</span><span class="code">WH-02</span></div>
+      <div class="service-item"><span>Drain &amp; sewer cleaning</span><span class="code">DR-03</span></div>
+      <div class="service-item"><span>Fixture replacement</span><span class="code">FX-04</span></div>
+      <div class="service-item"><span>Gas line work</span><span class="code">GL-05</span></div>
+      <div class="service-item"><span>Slab leak repair</span><span class="code">SL-06</span></div>
+      <div class="service-item"><span>Commercial plumbing</span><span class="code">CM-07</span></div>
+      <div class="service-item"><span>Emergency calls</span><span class="code">EM-08</span></div>
+    </div>
+  </section>
+
+  <section class="section" id="about">
+    <h2 class="section-title">On Record</h2>
+    <div class="about">
+      <div>
+        <p>A&amp;A Plumbing has worked out of Midland since 2012, taking on the calls other shops don't want to make time for — small jobs, odd hours, straight answers.</p>
+        <p>Based at 3801 Todd Drive, the crew covers Midland and the surrounding districts for both homeowners and local businesses, with a reputation built on showing up and doing the job right the first time.</p>
+      </div>
+      <div class="stamp">
+        <div class="yr">12+</div>
+        <div class="lbl">Years Operating in Midland</div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div>
+      <div class="footer-call">Call now: <a href="tel:4326346492">(432) 634-6492</a></div>
+      <div class="foot-addr">3801 Todd Drive, Midland, TX 79701</div>
+    </div>
+    <div class="foot-addr">A&amp;A PLUMBING — RESIDENTIAL &amp; COMMERCIAL</div>
+  </footer>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bill's Plumbing &amp; Fence Craft | Midland, TX</title>
+<style>
+  :root{
+    --barnred:#7c3b2e;
+    --barnred-dk:#5c2a20;
+    --timber:#8a6f4e;
+    --timber-dk:#5f4a32;
+    --tan:#ece0c8;
+    --ink:#2e2620;
+    --gray:#6b6052;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{
+    background:var(--tan);
+    color:var(--ink);
+    font-family:'Trebuchet MS', Arial, sans-serif;
+  }
+  a{color:inherit;}
+
+  header{
+    display:flex;justify-content:space-between;align-items:center;
+    padding:24px 7%;
+    background:var(--timber-dk);
+  }
+  .logo{color:var(--tan);font-size:1.35rem;font-weight:700;}
+  .logo .amp{color:#d8b46a;}
+  nav{display:flex;align-items:center;gap:28px;}
+  nav a{color:#d9cdb4;text-decoration:none;font-size:0.9rem;}
+  .nav-call{
+    background:var(--barnred);color:#fff !important;
+    padding:10px 22px;border-radius:3px;font-weight:700;
+  }
+
+  .hero{
+    padding:90px 7% 0;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:0;
+    max-width:1300px;
+    margin:0 auto;
+  }
+  .trade-panel{
+    padding:50px 40px;
+    position:relative;
+  }
+  .plumb-panel{
+    background:linear-gradient(165deg, #c9deda, #aac9c2);
+    border-radius:14px 0 0 14px;
+  }
+  .fence-panel{
+    background:linear-gradient(165deg, #e3d3ad, #cdb888);
+    border-radius:0 14px 14px 0;
+  }
+  .trade-label{
+    font-size:0.78rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;
+    margin-bottom:12px;
+  }
+  .plumb-panel .trade-label{color:#2c5c52;}
+  .fence-panel .trade-label{color:var(--barnred-dk);}
+  .trade-title{font-size:1.6rem;font-weight:700;margin-bottom:12px;line-height:1.2;color:var(--ink);}
+  .trade-panel p{color:#4a4234;font-size:0.95rem;line-height:1.6;}
+
+  .hero-center{
+    text-align:center;
+    padding:60px 7% 0;
+    max-width:780px;
+    margin:0 auto;
+  }
+  .hero-center h1{font-size:2.5rem;font-weight:800;line-height:1.25;color:var(--barnred-dk);}
+  .hero-center .sub{margin-top:18px;color:var(--gray);font-size:1.1rem;}
+  .hero-cta{margin-top:32px;display:flex;justify-content:center;gap:16px;flex-wrap:wrap;}
+  .btn-fill{
+    background:var(--barnred);color:#fff;
+    padding:15px 30px;border-radius:4px;
+    text-decoration:none;font-weight:700;font-size:0.95rem;
+  }
+  .btn-outline{
+    border:2px solid var(--timber-dk);color:var(--timber-dk);
+    padding:14px 30px;border-radius:4px;
+    text-decoration:none;font-weight:700;font-size:0.95rem;
+  }
+
+  .plank-divider{
+    height:14px;
+    background:repeating-linear-gradient(90deg, var(--timber) 0, var(--timber) 60px, var(--timber-dk) 60px, var(--timber-dk) 64px);
+    margin:70px 0;
+  }
+
+  .section{padding:0 7% 90px;max-width:1150px;margin:0 auto;}
+  .section-title{
+    text-align:center;font-size:2rem;font-weight:800;margin-bottom:50px;color:var(--barnred-dk);
+  }
+
+  .dual-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+  }
+  .dual-col{
+    background:#fff;
+    border-radius:12px;
+    padding:34px 30px;
+    border:1px solid #d8cba8;
+  }
+  .dual-col h3{
+    font-size:1.25rem;margin-bottom:18px;
+    color:var(--ink);
+  }
+  .dual-col ul{list-style:none;}
+  .dual-col li{
+    padding:12px 0;
+    border-bottom:1px solid #ece2c8;
+    font-size:0.97rem;
+    color:#4a4234;
+  }
+
+  .story-band{
+    background:var(--timber-dk);
+    color:var(--tan);
+    text-align:center;
+    padding:70px 7%;
+  }
+  .story-band p{
+    font-size:1.2rem;
+    max-width:680px;
+    margin:0 auto;
+    line-height:1.7;
+  }
+
+  footer{
+    background:var(--ink);
+    color:#cabd9f;
+    text-align:center;
+    padding:50px 7% 40px;
+  }
+  footer .phone{
+    font-size:1.9rem;font-weight:800;color:#d8b46a;
+    text-decoration:none;display:inline-block;margin:14px 0;
+  }
+
+  @media(max-width:850px){
+    .hero{grid-template-columns:1fr;}
+    .plumb-panel{border-radius:14px 14px 0 0;}
+    .fence-panel{border-radius:0 0 14px 14px;}
+    .hero-center h1{font-size:1.9rem;}
+    .dual-grid{grid-template-columns:1fr;}
+    nav a:not(.nav-call){display:none;}
+  }
+</style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">Bill's Plumbing <span class="amp">&amp;</span> Fence Craft</div>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a class="nav-call" href="tel:4326825157">(432) 682-5157</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="trade-panel plumb-panel">
+      <div class="trade-label">Plumbing</div>
+      <div class="trade-title">Pipes, drains &amp; water systems.</div>
+      <p>Full-service plumbing repair and installation for Midland homes.</p>
+    </div>
+    <div class="trade-panel fence-panel">
+      <div class="trade-label">Fence Craft</div>
+      <div class="trade-title">Built to last, built right.</div>
+      <p>Custom fencing — wood, metal, and everything that holds a property line.</p>
+    </div>
+  </section>
+
+  <div class="hero-center">
+    <h1>Two trades. One crew you can call on.</h1>
+    <p class="sub">Bill's Plumbing &amp; Fence Craft has been Midland's answer for both what's under the house and what's around it.</p>
+    <div class="hero-cta">
+      <a href="tel:4326825157" class="btn-fill">Call (432) 682-5157</a>
+      <a href="#services" class="btn-outline">View Services</a>
+    </div>
+  </div>
+
+  <div class="plank-divider"></div>
+
+  <section class="section" id="services">
+    <h2 class="section-title">What We Build &amp; Fix</h2>
+    <div class="dual-grid">
+      <div class="dual-col">
+        <h3>Plumbing Services</h3>
+        <ul>
+          <li>Leak detection &amp; repair</li>
+          <li>Water heater install &amp; service</li>
+          <li>Drain &amp; sewer cleaning</li>
+          <li>Fixture repair &amp; replacement</li>
+          <li>Gas line work</li>
+        </ul>
+      </div>
+      <div class="dual-col">
+        <h3>Fence Craft Services</h3>
+        <ul>
+          <li>Wood &amp; cedar fence builds</li>
+          <li>Chain link &amp; metal fencing</li>
+          <li>Fence repair &amp; post replacement</li>
+          <li>Gate installation</li>
+          <li>Property line fencing</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <div class="story-band">
+    <p>Bill's Plumbing &amp; Fence Craft grew out of doing both jobs well — fixing what's broken inside the house, and building what holds up outside it. Same crew, same standard, every time.</p>
+  </div>
+
+  <footer>
+    <div>Call Bill's today</div>
+    <a href="tel:4326825157" class="phone">(432) 682-5157</a>
+    <div>Midland, TX</div>
+  </footer>
+
+</body>
+</html>
